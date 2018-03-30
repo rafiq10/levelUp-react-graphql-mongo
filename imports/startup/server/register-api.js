@@ -6,7 +6,7 @@ import ResolutionsSchema from '../../api/resolutions/Resolutions.graphql';
 import ResolutionResolvers from '../../api/resolutions/resolvers';
 
 //hi
-
+//hi
 const testSchema = `
 type Query {
     hi: String,
