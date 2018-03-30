@@ -5,7 +5,8 @@ import ResolutionsSchema from '../../api/resolutions/Resolutions.graphql';
 
 const testSchema = `
 type Query {
-    hi: String
+    hi: String,
+    resolutions: [Resolution]
 }
 `
 const typeDefs = [
@@ -17,9 +18,21 @@ const resolvers = {
     Query: {
         hi(){
             return "Hello Rafael";
+        },
+        resolutions(){
+            return[
+                {
+                    _id: "asgwerfsdstg",
+                    name: "Get stuff done!"
+                },
+                {
+                    _id: "abba",
+                    name: "Loose some weight!"
+                }
+            ];
         }
     }
-}
+};
 
 const schema = makeExecutableSchema({
     typeDefs,
